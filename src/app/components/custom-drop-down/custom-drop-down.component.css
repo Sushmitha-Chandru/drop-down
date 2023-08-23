@@ -1,3 +1,6 @@
+.body{
+  font-family: sans-serif;
+}
 /**input style**/
 input {
   width:94%;
@@ -21,10 +24,12 @@ input {
 /**list style**/
 .list-options {
   width:700px;
-  height:250px;
+  height:225px;
   border: 1px solid #ddd;
   border-radius: 2%;
   margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 ul {
   list-style-type: none;
@@ -32,13 +37,17 @@ ul {
   height:100%;
   padding: 0;
   margin: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-family: 'slab-serif';
+  
+ 
 }
 
 ul li {
   padding: 8px 16px;
-  border-bottom: 1px solid #ddd;
+  font-family: sans-serif;
+    font-weight: inherit;
+    font-size: small;
+
+  /* border-bottom: 1px solid #ddd; */
  
 }
 

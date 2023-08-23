@@ -1,12 +1,12 @@
 <h3>Custom Drop down</h3>
-  <div class="container" (click)="invertCaret()">
+  <div class="container" (click)="invertCaret()"> 
     <!--Input field-->
     <div class="input-container">
       <input type="text"  name="drop-down-input" placeholder="Select an item" [(ngModel)]="selectedOption.name" readonly>
         <a href="#" id="dropdown-trigger" ><span class="caret-dropdown" [ngClass]="{'active':toggleCaret?true:false}"></span></a>
-    </div>
+    </div> 
    <!--Options List-->
-    <div  class="list-options" [ngClass]="{'display-none':!toggleCaret}" >
+     <div  class="list-options" [ngClass]="{'display-none':!toggleCaret}" >
       <ul [ngClass]="{'addscroll':list.length>7?true:false}">
         <li  *ngFor="let li of list" (click)="onSelection(li)">{{li.name}}</li>
       </ul>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Options } from 'src/app/models/drop-down.model';
+import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Options, myData } from 'src/app/models/drop-down.model';
 
 @Component({
   selector: 'app-custom-drop-down',
@@ -10,7 +11,6 @@ export class CustomDropDownComponent {
   toggleCaret:boolean=false;
   selectedOption:Options =  { id: 0, name: 'Select an option' };
 
-  //static dropdown data
   list=[
      { id: 1, name: 'Option 1' },
     { id: 2, name: 'Option 2' },
@@ -32,4 +32,44 @@ export class CustomDropDownComponent {
   {
     this.toggleCaret=!this.toggleCaret;
   }
+
+  dataForm:any;
+
+  constructor(private fb:FormBuilder)
+  {
+
+  }
+
+  // ngOnInit()
+  // {
+  //   this.dataForm=this.fb.group({
+  //     name:'',
+  //     address:this.fb.array([this.fb.group({
+  //       street:[''],
+  //       city:['',[Validators.required]]
+  //     })])
+  //   }
+  //   )
+
+  //   this.dataForm.setValue({
+  //     name:'abc',
+  //     address:[{
+  //       street:'test',
+  //       city:'blore'
+  //     }]
+  //   })
+  //   console.log(this.dataForm.value)
+    
+  // }
+
+  // get address()
+  // {
+  //   return this.dataForm.get('address') as FormArray
+  // }
+
+  // onSubmit(value:myData)
+  // {
+  //   console.log(value);
+  // }
+
 }
